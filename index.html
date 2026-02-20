@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Strategy Championship</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAME SCREEN ================= -->
+<div id="nameScreen" class="center-screen">
+    <h1>🏆 Product Strategy Championship</h1>
+    <p>Enter your name to begin</p>
+    <input type="text" id="playerNameInput" placeholder="Your Name" />
+    <button id="enterGameBtn">Enter Championship</button>
+</div>
+
+<!-- ================= GOAL INTRO SCREEN ================= -->
+<div id="goalIntro" class="center-screen" style="display:none;">
+    <h1 id="introTitle"></h1>
+    <button id="startBtn">Start Round</button>
+</div>
+
+<!-- ================= ROUND 1 GAME ================= -->
+<div id="gameContainer" style="display:none;">
+    <h2 id="goalTitle"></h2>
+    <div class="main-container">
+        <div class="icon-panel">
+            <h3>Select Max 3 Icons</h3>
+            <div class="icons" id="iconContainer"></div>
+        </div>
+
+        <div class="mobile-frame">
+            <div class="header">
+                <div class="logo">ProdXcart</div>
+                <div class="search-bar">🔍 Search products</div>
+            </div>
+
+            <div class="zone banner-zone" data-multiplier="1.5">
+                Promotional Banner Area
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📦</div>
+                <div class="product-title">
+                    Premium Wireless Headphones
+                </div>
+
+                <div class="zone small-zone" data-multiplier="1.3">
+                    Rating / Trust Area
+                </div>
+
+                <div class="price">₹2,499</div>
+
+                <div class="zone small-zone" data-multiplier="1">
+                    Offers / Shipping Area
+                </div>
+
+                <div class="zone small-zone" data-multiplier="1.4">
+                    Cart Benefits Area
+                </div>
+            </div>
+
+            <div class="checkout-section">
+                <div class="zone checkout-zone" data-multiplier="1.6">
+                    Checkout Optimization Area
+                </div>
+                <button class="buy-btn">Proceed to Buy</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="submitBtn">Submit Round</button>
+    <button id="nextBtn" style="display:none;">Next Goal</button>
+</div>
+
+<!-- ================= ROUND 2 INTRO ================= -->
+<div id="round2Intro" class="center-screen" style="display:none;">
+    <h1>Round 2: Early-Stage Startup PM</h1>
+    <div class="intro-box">
+        <p>You will run your startup for 4 sprints.</p>
+        <p>You have limited team energy each sprint.</p>
+        <br>
+        <p><strong>Goal:</strong> Keep Growth, Happiness & Stability balanced.</p>
+        <p>Fail if any metric drops below 15.</p>
+    </div>
+    <button id="startRound2">Start Round 2</button>
+</div>
+
+<!-- ================= ROUND 2 GAME ================= -->
+<div id="round2Game" style="display:none; padding:20px; text-align:center;">
+
+    <h2 id="sprintTitle">Sprint 1 of 4</h2>
+
+    <div class="goal-box">
+        Goal: Build a sustainable startup across 4 sprints by balancing all 3 metrics.
+    </div>
+
+    <div class="metrics">
+        <div>Growth: <span id="growth">50</span></div>
+        <div>Happiness: <span id="happiness">50</span></div>
+        <div>Stability: <span id="stability">50</span></div>
+    </div>
+
+    <div class="capacity-box">
+        Team Energy: <span id="capacity">10</span> points <br>
+        You can select up to <strong>3 actions</strong> this sprint
+        (<span id="selectedCount">0</span>/3 selected)
+    </div>
+
+    <div id="actionContainer" class="actions"></div>
+
+    <button id="confirmSprint">Confirm Sprint</button>
+</div>
+
+<!-- ================= ROUND 3 INTRO ================= -->
+<div id="round3Intro" class="center-screen" style="display:none;">
+    <h1>Round 3: PM Decision Arena</h1>
+    <div class="intro-box">
+        <p>You will answer 10 strategic product questions.</p>
+        <p>Choose the best product management decision.</p>
+    </div>
+    <button id="startRound3">Start Round 3</button>
+</div>
+
+<!-- ================= ROUND 3 GAME ================= -->
+<div id="round3Game" class="center-screen" style="display:none;">
+    <div class="question-card">
+        <h2 id="questionText"></h2>
+        <div id="optionsContainer"></div>
+        <button id="nextQuestionBtn" style="display:none;">Next</button>
+    </div>
+</div>
+
+<!-- ================= FINAL LEADERBOARD ================= -->
+<div id="leaderboard" class="center-screen" style="display:none;">
+    <h1> Championship Results</h1>
+    <h2 id="finalScore"></h2>
+    <p id="playerDisplay"></p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

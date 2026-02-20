@@ -1,0 +1,312 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: white;
+}
+
+/* Center screen (intro + leaderboard) */
+.center-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= GAME LAYOUT ================= */
+#gameContainer {
+    padding: 20px;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+/* ================= ICON PANEL ================= */
+.icon-panel {
+    width: 300px;
+    background: white;
+    color: black;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.icon {
+    display: block;
+    margin-bottom: 10px;
+    background: #007185;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: grab;
+    transition: 0.2s;
+}
+
+.icon:hover {
+    background: #004f5e;
+}
+
+/* ================= MOBILE FRAME ================= */
+.mobile-frame {
+    width: 300px;
+    background: white;
+    color: black;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+/* Header */
+.header {
+    background: #131921;
+    padding: 10px;
+    color: white;
+}
+
+.search-bar {
+    background: white;
+    color: #555;
+    margin-top: 6px;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* Zones */
+.zone {
+    border: 2px dashed #ccc;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    background: #f8fafc;
+}
+
+/* Product */
+.product-card {
+    padding: 10px;
+}
+
+.product-image {
+    background: #e5e7eb;
+    height: 120px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+/* Checkout */
+.checkout-section {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.buy-btn {
+    width: 100%;
+    padding: 10px;
+    background: #ffd814;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Buttons */
+button {
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: #22c55e;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Leaderboard */
+#leaderboard {
+    background: white;
+    color: black;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ROUND 2 */
+.metrics {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.capacity {
+    margin-bottom: 20px;
+}
+
+.actions {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.action-card {
+    background: white;
+    color: black;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    border: 2px solid transparent;
+}
+
+.action-card.selected {
+    border: 2px solid #22c55e;
+}
+
+/* ROUND 2 IMPROVEMENTS */
+
+.intro-box {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    width: 350px;
+    text-align: left;
+}
+
+.goal-box {
+    background: #dcfce7;
+    color: #065f46;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.capacity-box {
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.action-card {
+    background: white;
+    color: black;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border: 2px solid transparent;
+    text-align: left;
+}
+
+.action-card .positive {
+    color: #16a34a;
+}
+
+.action-card .negative {
+    color: #dc2626;
+}
+
+.action-card .neutral {
+    color: #6b7280;
+}
+/* ===== ROUND 3 ===== */
+
+.question-card {
+    background: white;
+    color: black;
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.option-card {
+    background: #f1f5f9;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+.option-card:hover {
+    background: #e2e8f0;
+}
+
+.option-card.selected {
+    border: 2px solid #22c55e;
+}
+.option-card.correct {
+    background-color: #16a34a;
+    color: white;
+    border: 2px solid #15803d;
+}
+
+.option-card.wrong {
+    background-color: #dc2626;
+    color: white;
+    border: 2px solid #b91c1c;
+}
+
+.option-card.disabled {
+    pointer-events: none;
+    opacity: 0.9;
+}
+#leaderboard.champion-mode {
+    background: linear-gradient(-45deg, #0f172a, #1e3a8a, #6d28d9, #0f172a);
+    background-size: 400% 400%;
+    animation: gradientShift 10s ease infinite;
+    color: white;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#nameScreen input {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+#nameScreen button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
