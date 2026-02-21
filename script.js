@@ -1,3 +1,12 @@
+
+const nameScreen = document.getElementById("nameScreen");
+const enterGameBtn = document.getElementById("enterGameBtn");
+const playerNameInput = document.getElementById("playerNameInput");
+const playerDisplay = document.getElementById("playerDisplay");
+
+
+
+
 // ================= ROUND 1 VARIABLES =================
 let maxIcons = 3;
 let placedIcons = new Set();
@@ -472,19 +481,20 @@ nextQuestionBtn.addEventListener("click", () => {
 // ================= FINAL =================
 
 function showFinal() {
+
+    round2Game.style.display = "none";
     round3Game.style.display = "none";
     leaderboard.style.display = "flex";
 
-    // ADD THIS LINE
-    leaderboard.classList.add("champion-mode");
-
     const finalTotal = totalScore + round2Score + round3Score;
 
+    playerDisplay.innerText = "Team: " + playerName;
+
     document.getElementById("finalScore").innerText =
-        "Round 1 Score: " + totalScore.toFixed(2) +
-        "\nRound 2 Score: " + round2Score +
-        "\nRound 3 Score: " + round3Score +
-        "\n\n Total Championship Score: " + finalTotal.toFixed(2);
+        "Round 1: " + totalScore.toFixed(2) +
+        "\nRound 2: " + round2Score +
+        "\nRound 3: " + round3Score +
+        "\nTotal Score: " + finalTotal.toFixed(2);
 }
 
 // INIT
@@ -507,3 +517,20 @@ document.getElementById("enterGameBtn").addEventListener("click", function () {
 });
 // document.getElementById("playerDisplay").innerText =
 //     "Player: " + playerName;
+
+enterGameBtn.addEventListener("click", function () {
+
+    const inputName = playerNameInput.value.trim();
+
+    if (inputName === "") {
+        alert("Please enter your Team Name");
+        return;
+    }
+
+    playerName = inputName;
+
+    nameScreen.style.display = "none";
+    goalIntro.style.display = "flex";
+
+    loadGoal();
+});
